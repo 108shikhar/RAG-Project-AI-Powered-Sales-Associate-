@@ -1,0 +1,397 @@
+:root {
+  --am-primary: #059669;
+  --am-primary-dark: #047857;
+  --am-accent: #2563eb;
+  --am-dark: #0f172a;
+  --am-bg: #f8fafc;
+  --am-card: #ffffff;
+  --am-border: #e2e8f0;
+  --am-text: #1e293b;
+  --am-muted: #64748b;
+  --am-rose: #e11d48;
+
+  --bot-dark: #0f172a;
+  --bot-card: #1e293b;
+  --bot-accent: #059669;
+  --bot-bubble-user: #2563eb;
+
+  --font-main: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background-color: var(--am-bg);
+  color: var(--am-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Top Strip */
+.apnamart-top-strip {
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 0.78rem;
+  padding: 0.4rem 1rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.apnamart-top-strip strong { color: #34d399; }
+
+/* Navbar */
+.apnamart-navbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--am-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: sticky; top: 0; z-index: 50;
+  padding: 0.75rem 2rem;
+}
+.apnamart-nav-container {
+  max-width: 1280px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+}
+.apnamart-logo-link {
+  display: flex; align-items: center; gap: 0.65rem; text-decoration: none;
+}
+.apnamart-logo-icon {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: #fff; width: 40px; height: 40px;
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.35rem; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+.apnamart-logo-text { display: flex; flex-direction: column; }
+.apnamart-main-title {
+  font-family: var(--font-main); font-size: 1.6rem; font-weight: 800;
+  color: #0f172a; line-height: 1.1; letter-spacing: -0.02em;
+}
+.apnamart-sub-title { font-size: 0.7rem; font-weight: 600; color: #059669; }
+
+/* Search Bar */
+.apnamart-search-bar {
+  flex: 1; max-width: 580px; display: flex; align-items: center;
+  background: #f1f5f9; border-radius: 8px; overflow: hidden;
+  border: 1px solid #cbd5e1;
+}
+.apnamart-search-bar:focus-within { border-color: var(--am-primary); background: #ffffff; }
+.search-icon { color: #94a3b8; padding-left: 1rem; }
+.apnamart-search-bar input {
+  flex: 1; border: none; outline: none; padding: 0.65rem 0.8rem;
+  font-size: 0.85rem; font-family: var(--font-body); background: transparent;
+}
+.apnamart-search-btn {
+  background: var(--am-primary); color: white; border: none;
+  padding: 0.65rem 1.35rem; font-weight: 600; font-size: 0.82rem; cursor: pointer;
+}
+
+/* Header Actions */
+.apnamart-header-actions { display: flex; align-items: center; gap: 1.25rem; }
+.nav-link {
+  text-decoration: none; color: #334155; font-size: 0.84rem; font-weight: 600;
+  display: flex; align-items: center; gap: 0.35rem;
+}
+.nav-link:hover { color: var(--am-primary); }
+
+.apnamart-cart-btn {
+  background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px;
+  padding: 0.45rem 0.95rem; font-size: 0.84rem; font-weight: 700; cursor: pointer;
+  display: flex; align-items: center; gap: 0.5rem; position: relative;
+}
+.apnamart-cart-badge {
+  background: var(--am-rose); color: white; border-radius: 50%;
+  font-size: 0.68rem; width: 19px; height: 19px; display: flex; align-items: center; justify-content: center;
+}
+.apnamart-login-btn {
+  background: #0f172a; color: #ffffff; border: none;
+  padding: 0.45rem 1.15rem; border-radius: 8px; font-weight: 700; font-size: 0.84rem; cursor: pointer;
+}
+
+/* Category Ribbon */
+.apnamart-categories-ribbon {
+  background: #ffffff; border-bottom: 1px solid var(--am-border);
+  display: flex; align-items: center; justify-content: center; gap: 2rem;
+  padding: 0.6rem 1rem; overflow-x: auto;
+}
+.category-item {
+  font-size: 0.82rem; font-weight: 600; color: #475569;
+  display: flex; align-items: center; gap: 0.45rem; cursor: pointer; white-space: nowrap;
+}
+.category-item:hover, .category-item.active { color: var(--am-primary); font-weight: 700; }
+
+/* Storefront Body */
+.apnamart-storefront-content { max-width: 1280px; margin: 1.5rem auto; padding: 0 1.5rem; }
+
+.apnamart-hero-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 16px; padding: 2.5rem; color: #ffffff;
+  display: flex; justify-content: space-between; align-items: center;
+  position: relative; overflow: hidden; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15);
+}
+.hero-left { max-width: 680px; }
+.deal-tag {
+  background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);
+  padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.72rem; font-weight: 800;
+  display: inline-block; margin-bottom: 0.75rem; letter-spacing: 0.05em;
+}
+.hero-left h2 { font-family: var(--font-main); font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; }
+.hero-left p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem; }
+.banner-highlights { display: flex; flex-wrap: wrap; gap: 1.25rem; font-size: 0.8rem; color: #94a3b8; }
+.banner-highlights span { display: flex; align-items: center; gap: 0.4rem; color: #e2e8f0; }
+.banner-highlights i { color: #34d399; }
+
+.hero-promo-badge {
+  background: #ffffff; color: #0f172a; padding: 1.5rem 2rem; border-radius: 12px;
+  text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.hero-promo-badge span { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--am-rose); font-weight: 800; }
+.hero-promo-badge h3 { font-family: var(--font-main); font-size: 1.8rem; font-weight: 800; color: #059669; }
+.hero-promo-badge p { font-size: 0.8rem; color: #64748b; font-weight: 600; }
+
+/* Preview Grid */
+.apnamart-preview-section { margin-top: 2rem; }
+.section-title-wrap {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;
+}
+.section-title-wrap h3 { font-family: var(--font-main); font-size: 1.3rem; font-weight: 800; }
+.deal-timer { font-size: 0.78rem; font-weight: 600; color: var(--am-primary); display: flex; align-items: center; gap: 0.35rem; }
+
+.storefront-cards-row {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.25rem;
+}
+.preview-card {
+  background: #ffffff; border: 1px solid var(--am-border); border-radius: 12px;
+  overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.preview-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.08); }
+.preview-card img { width: 100%; height: 180px; object-fit: cover; }
+.preview-info { padding: 0.85rem; }
+.preview-info h4 {
+  font-size: 0.85rem; font-weight: 700; color: #0f172a; margin-bottom: 0.4rem;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.price-row { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.4rem; }
+.price-row .price { font-size: 1.05rem; font-weight: 800; color: #0f172a; }
+.price-row .mrp { font-size: 0.78rem; color: #94a3b8; text-decoration: line-through; }
+.price-row .disc { font-size: 0.75rem; color: var(--am-primary); font-weight: 700; }
+.assured {
+  font-size: 0.68rem; font-weight: 700; color: #059669;
+  display: inline-flex; align-items: center; gap: 0.25rem;
+}
+
+
+/* ================= FLOATING CHATBOT (BOTTOM-RIGHT) ================= */
+
+.apnamart-sahayak-launcher {
+  position: fixed; bottom: 25px; right: 25px; z-index: 1000;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff; border-radius: 35px; padding: 0.5rem 1.15rem 0.5rem 0.6rem;
+  display: flex; align-items: center; gap: 0.75rem;
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.4);
+  cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.apnamart-sahayak-launcher:hover { transform: scale(1.04); box-shadow: 0 12px 28px rgba(5, 150, 105, 0.5); }
+
+.launcher-avatar {
+  background: #ffffff; color: #059669; width: 44px; height: 44px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; position: relative;
+}
+.launcher-pulse {
+  position: absolute; inset: -4px; border-radius: 50%;
+  border: 2px solid #34d399; animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 0; }
+  100% { transform: scale(0.95); opacity: 0; }
+}
+
+.launcher-label { display: flex; flex-direction: column; }
+.launcher-label span { font-size: 0.9rem; font-weight: 800; line-height: 1.2; }
+.launcher-label small { font-size: 0.7rem; color: #d1fae5; }
+
+/* Chat Window */
+.apnamart-chat-window {
+  position: fixed; bottom: 85px; right: 25px; z-index: 1001;
+  width: 440px; height: 620px; background: #0f172a;
+  border-radius: 18px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex; flex-direction: column; overflow: hidden;
+  transform: scale(0.85); opacity: 0; pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.apnamart-chat-window.open {
+  transform: scale(1); opacity: 1; pointer-events: auto;
+}
+
+/* Header */
+.chat-win-header {
+  background: #1e293b; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 1rem; display: flex; justify-content: space-between; align-items: center;
+}
+.mitr-header-profile { display: flex; align-items: center; gap: 0.65rem; }
+.mitr-avatar-badge {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: #fff; width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; position: relative; font-size: 0.95rem;
+}
+.online-indicator {
+  position: absolute; bottom: 0; right: 0; width: 10px; height: 10px;
+  background: #10b981; border: 2px solid #0f172a; border-radius: 50%;
+}
+.mitr-header-text h3 { font-size: 0.88rem; font-weight: 700; color: #fff; }
+.mitr-header-text p { font-size: 0.68rem; color: #94a3b8; }
+.chat-win-controls { display: flex; gap: 0.4rem; }
+.win-btn {
+  background: rgba(255, 255, 255, 0.08); border: none; color: #cbd5e1;
+  width: 28px; height: 28px; border-radius: 6px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-size: 0.78rem;
+}
+.win-btn:hover { background: rgba(255, 255, 255, 0.16); color: #fff; }
+
+/* LangGraph Mini Bar */
+.langgraph-mini-bar {
+  background: #090d16; padding: 0.35rem 0.75rem;
+  display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.62rem; color: #64748b; font-family: var(--font-mono);
+}
+.bar-step-node { display: flex; align-items: center; gap: 0.25rem; }
+.bar-step-node .dot { width: 6px; height: 6px; border-radius: 50%; background: #334155; }
+.bar-step-node.active { color: #34d399; }
+.bar-step-node.active .dot { background: #10b981; box-shadow: 0 0 6px #10b981; }
+
+/* Chat Stream */
+.chat-messages-container {
+  flex: 1; overflow-y: auto; padding: 1rem;
+  display: flex; flex-direction: column; gap: 0.85rem;
+}
+.mitr-bubble {
+  background: #1e293b; color: #f1f5f9; border-radius: 12px 12px 12px 2px;
+  padding: 0.75rem 0.95rem; font-size: 0.82rem; line-height: 1.45;
+  border: 1px solid rgba(255, 255, 255, 0.06); max-width: 92%;
+}
+.user-bubble {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff; border-radius: 12px 12px 2px 12px;
+  padding: 0.7rem 0.95rem; font-size: 0.82rem; line-height: 1.4;
+  align-self: flex-end; max-width: 85%;
+}
+
+/* Dropdown Wizard Card */
+.dropdown-wizard-card {
+  background: #131d2e; border: 1px solid rgba(5, 150, 105, 0.3);
+  border-radius: 12px; padding: 0.85rem; display: flex; flex-direction: column; gap: 0.75rem;
+}
+.dropdown-step { display: flex; flex-direction: column; gap: 0.35rem; }
+.dropdown-step.hidden { display: none; }
+.dropdown-step label {
+  font-size: 0.72rem; font-weight: 700; color: #34d399; display: flex; align-items: center; gap: 0.35rem;
+}
+.mitr-select, .mitr-input {
+  background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff; padding: 0.55rem 0.75rem; border-radius: 8px; font-size: 0.8rem;
+  outline: none; font-family: var(--font-body);
+}
+.mitr-select:focus, .mitr-input:focus { border-color: #34d399; }
+.mitr-select option { background: #0f172a; color: #ffffff; }
+
+.btn-mitr-submit {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: white; border: none; border-radius: 8px; padding: 0.65rem;
+  font-weight: 700; font-size: 0.82rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+  margin-top: 0.25rem; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35);
+  transition: transform 0.2s ease;
+}
+.btn-mitr-submit:hover { transform: translateY(-2px); }
+
+/* Product Cards in Chat */
+.mitr-products-list {
+  display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;
+}
+.mitr-product-card {
+  background: #1e293b; border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px; overflow: hidden; display: flex; gap: 0.65rem;
+  padding: 0.55rem; position: relative;
+}
+.mitr-prod-thumb {
+  width: 72px; height: 72px; border-radius: 6px; object-fit: cover; flex-shrink: 0;
+}
+.mitr-prod-details { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.mitr-prod-title {
+  font-size: 0.78rem; font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: 0.25rem;
+}
+.mitr-prod-pricing {
+  display: flex; align-items: baseline; gap: 0.4rem; font-size: 0.85rem; font-weight: 800; color: #fff;
+}
+.mitr-prod-pricing .disc { color: #10b981; font-size: 0.7rem; font-weight: 700; }
+.mitr-prod-match {
+  position: absolute; top: 6px; right: 6px; background: rgba(5, 150, 105, 0.2);
+  color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4);
+  padding: 0.1rem 0.4rem; border-radius: 12px; font-size: 0.62rem; font-weight: 700;
+}
+.btn-quick-add {
+  align-self: flex-start; margin-top: 0.35rem; background: #059669;
+  color: #fff; border: none; border-radius: 4px; padding: 0.2rem 0.55rem;
+  font-size: 0.7rem; font-weight: 700; cursor: pointer;
+}
+
+/* Chat Footer */
+.chat-win-footer {
+  background: #1e293b; border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.65rem 0.85rem;
+}
+.footer-input-wrap {
+  display: flex; align-items: center; background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px;
+  padding: 0.25rem 0.35rem 0.25rem 0.85rem;
+}
+.footer-input-wrap:focus-within { border-color: #059669; }
+.footer-input-wrap input {
+  flex: 1; background: transparent; border: none; outline: none;
+  color: #fff; font-size: 0.8rem; font-family: var(--font-body);
+}
+.footer-send-btn {
+  background: #059669; color: white; border: none; width: 28px; height: 28px;
+  border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem;
+}
+
+/* Modals */
+.modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(6px);
+  z-index: 2000; display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+}
+.modal-backdrop.open { opacity: 1; pointer-events: auto; }
+.modal-box {
+  background: #1e293b; border-radius: 14px; width: 90%; max-width: 440px;
+  padding: 1.5rem; color: white; border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.modal-box-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.btn-close-modal { background: none; border: none; color: #94a3b8; font-size: 1.1rem; cursor: pointer; }
+.form-field { margin-bottom: 1rem; }
+.form-field label { display: block; font-size: 0.78rem; font-weight: 600; color: #cbd5e1; margin-bottom: 0.3rem; }
+.modal-input {
+  width: 100%; background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px; padding: 0.55rem; color: #fff; font-size: 0.82rem; outline: none;
+}
+.form-field small { font-size: 0.68rem; color: #94a3b8; margin-top: 0.2rem; display: block; }
+.form-field small a { color: #34d399; text-decoration: none; }
+.modal-save-btn {
+  width: 100%; background: #059669; color: white; border: none;
+  border-radius: 6px; padding: 0.65rem; font-weight: 700; font-size: 0.85rem; cursor: pointer;
+}
+
+.toast-wrap { position: fixed; bottom: 20px; left: 20px; z-index: 3000; display: flex; flex-direction: column; gap: 0.4rem; }
+.toast-msg {
+  background: #1e293b; border: 1px solid #059669; color: #fff;
+  padding: 0.6rem 1rem; border-radius: 8px; font-size: 0.78rem; box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 600px) {
+  .apnamart-chat-window { width: calc(100vw - 20px); right: 10px; bottom: 80px; height: 580px; }
+  .apnamart-search-bar { display: none; }
+}

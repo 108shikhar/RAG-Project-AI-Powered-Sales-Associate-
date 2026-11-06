@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApnaMart | Sab Kuch, Ek Hi Jagah — Online Shopping India</title>
+  <meta name="description" content="ApnaMart is your one-stop online mart for fashion, mobiles, electronics, home & kitchen, beauty, sports, toys and grocery. Genuine products, fast delivery, easy returns.">
+  <meta name="author" content="ApnaMart" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- ================= APNAMART REALISTIC STOREFRONT BACKDROP ================= -->
+
+  <!-- Top Announcement Strip -->
+  <div class="apnamart-top-strip">
+    <span>🎉 <strong>APNAMART MEGA SALE IS LIVE!</strong> Sab Kuch, Ek Hi Jagah &bull; 🚚 Fast Doorstep Delivery across India &bull; 🔄 7 Days Easy Returns</span>
+  </div>
+
+  <!-- ApnaMart Official Navbar -->
+  <header class="apnamart-navbar">
+    <div class="apnamart-nav-container">
+      <div class="apnamart-brand-wrap">
+        <a href="/" class="apnamart-logo-link">
+          <span class="apnamart-logo-icon"><i class="fa-solid fa-basket-shopping"></i></span>
+          <div class="apnamart-logo-text">
+            <span class="apnamart-main-title">ApnaMart</span>
+            <span class="apnamart-sub-title">Sab Kuch, Ek Hi Jagah</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="apnamart-search-bar">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="Search 10,000+ genuine products, mobiles, sarees, electronics, groceries..." />
+        <button class="apnamart-search-btn">Search</button>
+      </div>
+
+      <!-- Header Action Items -->
+      <div class="apnamart-header-actions">
+        <a href="#download" class="nav-link"><i class="fa-solid fa-mobile-screen"></i> Sell Phone</a>
+        <a href="#seller" class="nav-link"><i class="fa-solid fa-newspaper"></i> Blog</a>
+        <button class="apnamart-cart-btn" id="openHeaderCartBtn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+          <span class="apnamart-cart-badge" id="cartBadgeCount">0</span>
+        </button>
+        <button class="apnamart-login-btn">Sign In</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Categories Ribbon Covering All 8 Real ApnaMart Categories -->
+  <nav class="apnamart-categories-ribbon">
+    <div class="category-item active"><i class="fa-solid fa-shirt"></i> Fashion</div>
+    <div class="category-item"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles</div>
+    <div class="category-item"><i class="fa-solid fa-plug"></i> Electronics</div>
+    <div class="category-item"><i class="fa-solid fa-couch"></i> Home &amp; Kitchen</div>
+    <div class="category-item"><i class="fa-solid fa-wand-magic-sparkles"></i> Beauty</div>
+    <div class="category-item"><i class="fa-solid fa-volleyball"></i> Sports</div>
+    <div class="category-item"><i class="fa-solid fa-gamepad"></i> Toys</div>
+    <div class="category-item"><i class="fa-solid fa-bowl-rice"></i> Grocery</div>
+  </nav>
+
+  <!-- Hero Promotional Banner Scraped Directly from ApnaMart -->
+  <main class="apnamart-storefront-content">
+    <div class="apnamart-hero-banner">
+      <div class="hero-left">
+        <span class="deal-tag">OFFICIAL APNAMART STORE</span>
+        <h2>Sab Kuch, Ek Hi Jagah &bull; Up to 60% OFF</h2>
+        <p>100% Genuine Mobiles, Casual Shirts, Silk Sarees, boAt Headphones, Kitchen Induction Cookware &amp; Grocery Staples at Unbeatable Prices.</p>
+        <div class="banner-highlights">
+          <span><i class="fa-solid fa-shield-halved"></i> 100% Verified Quality</span>
+          <span><i class="fa-solid fa-truck-fast"></i> Fast Delivery across India</span>
+          <span><i class="fa-solid fa-location-dot"></i> Gonda, UP (Pincode: 271310)</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-promo-badge">
+          <span>Daily Deals</span>
+          <h3>Under ₹499</h3>
+          <p>Everyday Wardrobe</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Scraped Product Catalog Grid Preview -->
+    <div class="apnamart-preview-section">
+      <div class="section-title-wrap">
+        <h3>🔥 Trending Live on ApnaMart (Real Scraped Inventory)</h3>
+        <span class="deal-timer"><i class="fa-regular fa-clock"></i> Live from ApnaMart Supabase Database</span>
+      </div>
+
+      <div class="storefront-cards-row" id="storefrontPreviewGrid">
+        <div class="preview-card">
+          <img src="https://apnamarts.shop/products/fashion-shirt.jpg" alt="Men's Cotton Casual Shirt" />
+          <div class="preview-info">
+            <h4>Men's Cotton Casual Shirt</h4>
+            <div class="price-row"><span class="price">₹1,299</span> <span class="mrp">₹1,732</span> <span class="disc">25% OFF</span></div>
+            <span class="assured"><i class="fa-solid fa-shield-halved"></i> ApnaMart Verified</span>
+          </div>
+        </div>
+
+        <div class="preview-card">
+          <img src="https://apnamarts.shop/products/mobile-5g.jpg" alt="Smartphone 5G" />
+          <div class="preview-info">
+            <h4>Smartphone 5G 8GB/128GB</h4>
+            <div class="price-row"><span class="price">₹14,999</span> <span class="mrp">₹17,044</span> <span class="disc">12% OFF</span></div>
+            <span class="assured"><i class="fa-solid fa-shield-halved"></i> ApnaMart Verified</span>
+          </div>
+        </div>
+
+        <div class="preview-card">
+          <img src="https://apnamarts.shop/products/elec-headphones.jpg" alt="Wireless Bluetooth Headphones" />
+          <div class="preview-info">
+            <h4>Wireless Bluetooth Headphones 40h</h4>
+            <div class="price-row"><span class="price">₹2,499</span> <span class="mrp">₹3,570</span> <span class="disc">30% OFF</span></div>
+            <span class="assured"><i class="fa-solid fa-shield-halved"></i> ApnaMart Verified</span>
+          </div>
+        </div>
+
+        <div class="preview-card">
+          <img src="https://wjypcfbqacmspcjznlje.supabase.co/storage/v1/object/public/product-images/1788075698787.jpeg" alt="Designer Saree" />
+          <div class="preview-info">
+            <h4>Designer Party Wear Saree</h4>
+            <div class="price-row"><span class="price">₹600</span> <span class="mrp">₹750</span> <span class="disc">20% OFF</span></div>
+            <span class="assured"><i class="fa-solid fa-shield-halved"></i> ApnaMart Verified</span>
+          </div>
+        </div>
+
+        <div class="preview-card">
+          <img src="https://apnamarts.shop/products/home-cookware.jpg" alt="Stainless Steel Cookware" />
+          <div class="preview-info">
+            <h4>Stainless Steel 5-Pc Cookware Set</h4>
+            <div class="price-row"><span class="price">₹3,499</span> <span class="mrp">₹4,485</span> <span class="disc">22% OFF</span></div>
+            <span class="assured"><i class="fa-solid fa-shield-halved"></i> ApnaMart Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- ================= FLOATING APNAMART SAHAYAK (BOTTOM-RIGHT) ================= -->
+
+  <!-- Floating Launcher Icon (Bottom-Right) -->
+  <div class="apnamart-sahayak-launcher" id="mitrLauncherBtn" title="Chat with ApnaMart Sahayak">
+    <div class="launcher-avatar">
+      <i class="fa-solid fa-headset"></i>
+      <span class="launcher-pulse"></span>
+    </div>
+    <div class="launcher-label">
+      <span>Ask <strong>Apna Sahayak</strong> 🙏</span>
+      <small>AI Shopping Associate</small>
+    </div>
+  </div>
+
+  <!-- ApnaMart Sahayak Chatbot Popover Window (Bottom-Right) -->
+  <div class="apnamart-chat-window" id="shopsyChatWindow">
+    
+    <!-- Window Header -->
+    <div class="chat-win-header">
+      <div class="mitr-header-profile">
+        <div class="mitr-avatar-badge">
+          <i class="fa-solid fa-user-tie"></i>
+          <span class="online-indicator"></span>
+        </div>
+        <div class="mitr-header-text">
+          <h3>ApnaMart Sahayak (Aarav)</h3>
+          <p>Personal Shopping Assistant &bull; Sab Kuch, Ek Hi Jagah</p>
+        </div>
+      </div>
+
+      <div class="chat-win-controls">
+        <button class="win-btn" id="apiConfigTrigger" title="Model & API Settings"><i class="fa-solid fa-sliders"></i></button>
+        <button class="win-btn" id="restartFlowBtn" title="Restart Shopping Wizard"><i class="fa-solid fa-rotate-left"></i></button>
+        <button class="win-btn" id="closeChatWinBtn" title="Close Chatbot"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+
+    <!-- Sequential LangGraph Pipeline Indicator Bar -->
+    <div class="langgraph-mini-bar" id="pipelineMiniBar">
+      <div class="bar-step-node" id="stepNode1"><span class="dot"></span> 1. Category</div>
+      <div class="bar-step-node" id="stepNode2"><span class="dot"></span> 2. Subcategory</div>
+      <div class="bar-step-node" id="stepNode3"><span class="dot"></span> 3. Product Type</div>
+      <div class="bar-step-node" id="stepNode4"><span class="dot"></span> 4. Spec / Occasion</div>
+      <div class="bar-step-node" id="stepNode5"><span class="dot"></span> 5. Vector Match</div>
+    </div>
+
+    <!-- Chat Messages Stream & Interactive Dropdown Wizard -->
+    <div class="chat-messages-container" id="chatMessagesStream">
+      
+      <!-- Greeting Message Bubble -->
+      <div class="mitr-bubble">
+        <p><strong>Namaste! Welcome to ApnaMart — Sab Kuch, Ek Hi Jagah! 🙏</strong><br>Main hoon aapka personal AI Sahayak.</p>
+        <p style="margin-top: 0.4rem; font-size: 0.78rem; color: #cbd5e1;">
+          Select your choices from the dropdowns below across any category (Fashion, Mobiles, Electronics, Beauty, Sports, Toys, Home, Grocery):
+        </p>
+      </div>
+
+      <!-- Multi-Stage Sequential Dropdown Card Covering ALL 8 Categories -->
+      <div class="dropdown-wizard-card" id="dropdownWizardCard">
+        
+        <!-- Dropdown 1: Main Category (8 real categories) -->
+        <div class="dropdown-step" id="groupCategory">
+          <label><i class="fa-solid fa-layer-group"></i> 1. Select Product Category:</label>
+          <select id="selectCategory" class="mitr-select">
+            <option value="">-- Choose Category --</option>
+            <option value="Fashion">👔 Fashion (Clothes, Ethnic, Western)</option>
+            <option value="Mobiles">📱 Mobiles &amp; Accessories</option>
+            <option value="Electronics">🎧 Electronics &amp; Gadgets</option>
+            <option value="Beauty">✨ Beauty &amp; Grooming</option>
+            <option value="Sports">🏏 Sports &amp; Fitness</option>
+            <option value="Toys">🧸 Toys &amp; Kids</option>
+            <option value="Home & Kitchen">🍳 Home &amp; Kitchen</option>
+            <option value="Grocery">🌾 Grocery &amp; Staples</option>
+          </select>
+        </div>
+
+        <!-- Dropdown 2: Subcategory (Dynamically unrolled) -->
+        <div class="dropdown-step hidden" id="groupSubCategory">
+          <label><i class="fa-solid fa-sitemap"></i> 2. Select Subcategory:</label>
+          <select id="selectSubCategory" class="mitr-select">
+            <option value="">-- Choose Subcategory --</option>
+          </select>
+        </div>
+
+        <!-- Dropdown 3: Product Selection (Type) -->
+        <div class="dropdown-step hidden" id="groupProductType">
+          <label><i class="fa-solid fa-tag"></i> 3. Select Product Type:</label>
+          <select id="selectProductType" class="mitr-select">
+            <option value="">-- Choose Product Type --</option>
+          </select>
+        </div>
+
+        <!-- Dropdown 4: Occasion / Spec -->
+        <div class="dropdown-step hidden" id="groupOccasionSpec">
+          <label id="labelOccasionSpec"><i class="fa-solid fa-calendar-check"></i> 4. Select Occasion / Spec:</label>
+          <select id="selectOccasionSpec" class="mitr-select">
+            <option value="">-- Choose Option --</option>
+          </select>
+        </div>
+
+        <!-- Dropdown 5: Size / Purpose -->
+        <div class="dropdown-step hidden" id="groupSizePurpose">
+          <label id="labelSizePurpose"><i class="fa-solid fa-ruler"></i> 5. Select Size / Purpose:</label>
+          <select id="selectSizePurpose" class="mitr-select">
+            <option value="">-- Choose Option --</option>
+          </select>
+        </div>
+
+        <!-- Final Input: Comments / Color / Preferences -->
+        <div class="dropdown-step hidden" id="groupFinalComments">
+          <label><i class="fa-solid fa-palette"></i> 6. Any other comments, color preference, or brand?</label>
+          <input 
+            type="text" 
+            id="inputFinalComments" 
+            class="mitr-input" 
+            placeholder="e.g. Prefer Navy Blue or Black / Red mobile cover / Pure cotton / Fast delivery" 
+          />
+
+          <button id="btnSubmitMitrChain" class="btn-mitr-submit">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Find Best Products on ApnaMart
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom Chat Input Bar (For conversational natural language queries) -->
+    <div class="chat-win-footer">
+      <form id="freeformChatForm" class="footer-input-wrap">
+        <input 
+          type="text" 
+          id="freeformInput" 
+          placeholder="Or ask anything (e.g. '5G mobile 256GB' or 'Cotton shirt size L')..." 
+          autocomplete="off" 
+        />
+        <button type="submit" class="footer-send-btn" title="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+
+
+  <!-- ================= SETTINGS & CART MODALS ================= -->
+
+  <!-- API Settings Modal -->
+  <div class="modal-backdrop" id="apiSettingsModal">
+    <div class="modal-box">
+      <div class="modal-box-header">
+        <h3><i class="fa-solid fa-sliders"></i> ApnaMart Sahayak AI Configuration</h3>
+        <button class="btn-close-modal" id="closeApiSettingsBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <form id="apiConfigForm">
+        <div class="form-field">
+          <label>Groq API Key (LPU Inference)</label>
+          <input type="password" id="cfgGroqApiKey" placeholder="gsk_..." class="modal-input" />
+          <small>Free key at <a href="https://console.groq.com/keys" target="_blank">console.groq.com/keys</a></small>
+        </div>
+
+        <div class="form-field">
+          <label>Groq Model Architecture</label>
+          <select id="cfgGroqModel" class="modal-input">
+            <option value="llama-3.3-70b-versatile">llama-3.3-70b-versatile (Recommended)</option>
+            <option value="llama-3.1-8b-instant">llama-3.1-8b-instant (800+ tok/s)</option>
+            <option value="mixtral-8x7b-32768">mixtral-8x7b-32768 (32k context)</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label>Hugging Face Token (all-mpnet-base-v2)</label>
+          <input type="password" id="cfgHfToken" placeholder="hf_..." class="modal-input" />
+          <small>Free token at <a href="https://huggingface.co/settings/tokens" target="_blank">huggingface.co/settings/tokens</a></small>
+        </div>
+
+        <button type="submit" class="modal-save-btn">Save Settings &amp; Connect</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Shopping Bag Modal -->
+  <div class="modal-backdrop" id="shoppingBagModal">
+    <div class="modal-box">
+      <div class="modal-box-header">
+        <h3><i class="fa-solid fa-cart-shopping"></i> Your ApnaMart Bag</h3>
+        <button class="btn-close-modal" id="closeBagBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="cartModalItemsList" style="max-height: 250px; overflow-y: auto; margin-bottom: 1rem;"></div>
+      <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 1.15rem; margin-bottom: 1rem; border-top: 1px solid #e2e8f0; padding-top: 0.75rem;">
+        <span>Total:</span>
+        <span id="bagTotalDisplay" style="color: #059669;">₹0</span>
+      </div>
+      <button class="modal-save-btn" id="btnBagCheckout" style="background: #059669; color: #fff;">Place ApnaMart Order</button>
+    </div>
+  </div>
+
+  <div id="shopsyToastContainer" class="toast-wrap"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
