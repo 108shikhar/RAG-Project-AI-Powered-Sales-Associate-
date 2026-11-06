@@ -1,0 +1,9 @@
+{
+  "node_version": "20",
+  "dockerfile_lines": [],
+  "dependencies": ["."],
+  "graphs": {
+    "ecommerce_agent": "./ecommerce_agent/agent.py:graph"
+  },
+  "env": ".env"
+}

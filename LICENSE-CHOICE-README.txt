@@ -1,0 +1,1 @@
+Before adding a license, verify permissions for the reference implementation, catalogue records, product images, and all third-party assets. Do not assume that uploading a ZIP grants redistribution rights.

@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "ecommerce-sales-associate-rag"
+version = "3.0.0"
+description = "AI Sales Associate for ApnaMart (https://apnamarts.shop/) replicating offline retail shopping discovery with Groq LPU and 768-D all-mpnet-base-v2 vector search."
+authors = ["Shikhar <apnamarts.shop>"]
+readme = "README.md"
+packages = [{include = "ecommerce_agent"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+fastapi = ">=0.100.0"
+uvicorn = ">=0.23.0"
+langchain = ">=0.1.0"
+langchain-core = ">=0.1.0"
+langgraph = ">=0.0.20"
+sentence-transformers = ">=2.2.0"
+groq = ">=0.4.0"
+numpy = ">=1.24.0"
+python-dotenv = ">=1.0.0"
+pydantic = ">=2.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
