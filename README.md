@@ -1,4 +1,4 @@
-# ApnaMart AI Sales Associate (ApnaMart Sahayak)
+# AI-Powered Sales Associate
 
 A conversational e-commerce product-discovery assistant. It converts a shopper's natural-language request into structured preferences, retrieves relevant catalogue items, and generates a consultative recommendation.
 
